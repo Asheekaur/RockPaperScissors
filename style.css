@@ -6,6 +6,8 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+/* score section */
+
 .score-container {
   border: 2px solid white;
   width: 40rem;
@@ -56,3 +58,31 @@ body {
   line-height: 1;
   font-weight: 800;
 }
+
+/* end of score section */
+
+/* game image section */
+.game-image {
+  margin-top: 6rem;
+  text-align: center;
+}
+.icons {
+  width: 10rem;
+  height: 9.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  border-radius: 8rem;
+  background-color: white;
+  cursor: pointer;
+}
+#game-img-1 {
+  border: 20px solid rgb(68, 130, 172);
+}
+#game-img-2 {
+  border: 20px solid rgb(240, 240, 94);
+}
+#game-img-3 {
+  border: 20px solid rgb(214, 108, 94);
+}
+
+/* end of game image section */
