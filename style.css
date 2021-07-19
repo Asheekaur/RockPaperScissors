@@ -105,10 +105,10 @@ body {
   cursor: pointer;
   font-weight: 550;
 }
-.rules-btn button:hover{
-color: #52ab98;
+.rules-btn button:hover {
+  color: #52ab98;
 }
-.rules-btn img{
+.rules-btn img {
   width: 1.2rem;
 }
 
