@@ -95,8 +95,8 @@ body {
 
 .rules-btn {
   position: absolute;
-  right: 3rem;
-  bottom: 2rem;
+  right: 1rem;
+  bottom: 1rem;
 }
 .rules-btn button {
   font-size: 1.4rem;
@@ -193,7 +193,7 @@ body {
 
 /* game page  */
 
-.game-page{
+.game-page {
   display: none;
 }
 .score-bar {
@@ -215,6 +215,159 @@ body {
   color: #f2f2f2;
   margin-top: 1rem;
   font-size: 2.6rem;
+}
+.player1-username {
+  position: absolute;
+  left: 7%;
+  top: 28%;
+  margin: 0;
+}
+.player1-username p {
+  font-size: 2rem;
+  width: 18rem;
+  padding: 0.6rem 0.2rem;
+  text-align: center;
+  border: 3px solid #c8d8e4;
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  color: #52ab98;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 550;
+  margin: 0 0;
+  cursor: pointer;
+}
+.block-1 {
+  border: 3px solid #c8d8e4;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  margin: 3rem auto;
+  border-radius: 0.3rem;
+}
+.player1-username span img {
+  width: 6.5rem;
+  height: 6.5rem;
+  align-items: center;
+  border-radius: 0.3rem;
+  margin: auto;
+}
+.player1-name {
+  width: 7.5rem;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  bottom: 35%;
+  left: 13%;
+  font-size: 1.4rem;
+  color: #f2f2f2;
+  text-transform: capitalize;
+}
+.player1-game-icons {
+  position: absolute;
+  bottom: 14%;
+  left: 4%;
+}
+.player1-game-icons .icons {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#game-img-1 {
+  border: 10px solid rgb(68, 130, 172);
+}
+#game-img-2 {
+  border: 10px solid rgb(240, 240, 94);
+}
+#game-img-3 {
+  border: 10px solid rgb(214, 108, 94);
+}
+.timer {
+  position: absolute;
+  top: 28%;
+  left: 46.6%;
+  font-size: 1.6rem;
+  line-height: 0;
+  border: 3px solid #c8d8e4;
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  color: #52ab98;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 550;
+  cursor: pointer;
+  padding: 0.2rem 0.9rem;
+}
+.icon-output-block {
+  border: 3px solid white;
+  width: 25rem;
+  height: 22rem;
+  position: absolute;
+  left: 36.7%;
+  top: 42%;
+  border-radius: 1rem;
+}
+.player2-username {
+  position: absolute;
+  right: 7%;
+  top: 28%;
+  margin: 0;
+}
+.player2-username p {
+  font-size: 2rem;
+  width: 18rem;
+  padding: 0.6rem 0.2rem;
+  text-align: center;
+  border: 3px solid #c8d8e4;
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  color: #52ab98;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 550;
+  margin: 0 0;
+  cursor: pointer;
+}
+.player2-game-icons {
+  position: absolute;
+  bottom: 14%;
+  right: 4%;
+}
+.player2-game-icons .icons {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.block-2 {
+  border: 3px solid #c8d8e4;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  margin: 3rem auto;
+  border-radius: 0.3rem;
+}
+.player2-username span img {
+  width: 6.5rem;
+  height: 6.5rem;
+  align-items: center;
+  border-radius: 0.3rem;
+  margin: auto;
+}
+.player2-name {
+  width: 7.5rem;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  bottom: 35%;
+  right: 13%;
+  font-size: 1.4rem;
+  color: #f2f2f2;
+  text-transform: capitalize;
 }
 .back-btn-2 {
   position: absolute;
