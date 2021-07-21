@@ -6,7 +6,6 @@ body {
   background-color: #2b6777;
 }
 
-
 /* score section */
 
 .home-page {
@@ -281,14 +280,27 @@ body {
   bottom: 14%;
   left: 4%;
 }
-.player1-game-icons .icons {
-  width: 5rem;
-  height: 5rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+.icon-img {
+  width: 4.8rem;
+  height: 4.5rem;
+}
+.player1-game-icons button {
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
-
+.icon {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+#game-img-1,
+#game-img-2,
+#game-img-3 {
+  width: 6.3rem;
+  height: 6.3rem;
+  border-radius: 9rem;
+  padding: 0;
+}
 #game-img-1 {
   border: 10px solid rgb(68, 130, 172);
 }
@@ -323,6 +335,24 @@ body {
   top: 42%;
   border-radius: 1rem;
 }
+.icon-output-block button {
+  position: absolute;
+  top: 7.5rem;
+  left: 3rem;
+}
+.icon-output-block .icon-img {
+  width: 6rem;
+  height: 6rem;
+}
+.icon-output-block #game-img-1,
+.icon-output-block #game-img-2,
+.icon-output-block #game-img-3 {
+  width: 8rem;
+  height: 8rem;
+}
+.icon1-Output , .icon2-Output  ,.icon3-Output {
+  display: none;
+}
 .player2-username {
   position: absolute;
   right: 7%;
@@ -349,11 +379,9 @@ body {
   bottom: 14%;
   right: 4%;
 }
-.player2-game-icons .icons {
-  width: 5rem;
-  height: 5rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+.player2-game-icons button {
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 .block-2 {

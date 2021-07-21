@@ -41,3 +41,22 @@ RulesBackBtn.addEventListener("click", e => {
     gamePage.style.display = 'none';
     rulesPage.style.display = 'block';
 });
+
+const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
+player1IconBtn1.addEventListener("click", e => {
+    setTimeout( function () { 
+        document.querySelector(".icon1-Output").style.display = "block"; 
+    }, 1000);
+});
+const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
+player1IconBtn2.addEventListener("click", e => {
+       setTimeout( function () { 
+        document.querySelector(".icon2-Output").style.display = "block";
+    }, 1000);
+});
+const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
+player1IconBtn3.addEventListener("click", e => {
+       setTimeout( function () { 
+        document.querySelector(".icon3-Output").style.display = "block";
+    }, 1000);
+});
