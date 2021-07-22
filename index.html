@@ -116,7 +116,11 @@
             <li>win<span>0</span></li>
         </nav>
 
-        <div class="game-blocks">
+        <div class="timer-block">
+            <p class="timer"></p>
+        </div>
+
+        <section class="game-blocks">
 
             <div class="player1-game-block">
                 <div class="player1-username">
@@ -138,19 +142,24 @@
             </div>
 
             <div class="output-container">
-                <div class="timer-block">
-                    <p class="timer"></p>
-                </div>
                 <div class="icon-output-block">
-                        <button id="game-img-1" class="icon1-Output"  >
+                    <div class="icon-output-block-left ">
+                        <button id="game-btn-img-1" class="icon1-Output-left">
                             <img src="img/rock-img.png" class="icon-img" alt="loading...">
                         </button>
-                        <button id="game-img-2" class="icon2-Output" >
+                        <button id="game-btn-img-2" class="icon2-Output-left">
                             <img src="img/paper-img.png" class="icon-img" alt="loading...">
                         </button>
-                        <button id="game-img-3" class="icon3-Output" >
+                        <button id="game-btn-img-3" class="icon3-Output-left">
                             <img src="img/Scissors-img.png" class="icon-img" alt="loading...">
                         </button>
+                    </div>
+
+                    <div class="icon-output-block-right">
+                        <button id="game-btn-img-1" class="icon1-Output-right random-Output-Btn">
+                            <img src="" id="randomOutput" class="icon-img" alt="loading...">
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -161,19 +170,19 @@
                 </div>
                 <p class="player2-name"></p>
                 <div class="player2-game-icons">
-                    <button id="game-img-1">
+                    <button id="game-img-1" class="player2-icon-btn1">
                         <img src="img/rock-img.png" class="icon-img" alt="loading...">
                     </button>
-                    <button id="game-img-2">
+                    <button id="game-img-2" class="player2-icon-btn2">
                         <img src="img/paper-img.png" class="icon-img" alt="loading...">
                     </button>
-                    <button id="game-img-3">
+                    <button id="game-img-3" class="player2-icon-btn3">
                         <img src="img/Scissors-img.png" class="icon-img" alt="loading...">
                     </button>
                 </div>
             </div>
 
-        </div>
+        </section>
 
         <div class="back-btn-2">
             <button> Back <img src="img/back-arrow.png" alt="loading..."></button>

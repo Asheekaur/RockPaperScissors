@@ -335,10 +335,25 @@ body {
   top: 42%;
   border-radius: 1rem;
 }
-.icon-output-block button {
+.icon-output-block-left button {
   position: absolute;
   top: 7.5rem;
   left: 3rem;
+}
+#game-btn-img-1,
+#game-btn-img-2,
+#game-btn-img-3{
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 5rem;
+  padding: 0;
+  border: 10px solid #52ab98;
+  background:#ffffff;
+} 
+.icon-output-block-right button {
+  position: absolute;
+  top: 7.5rem;
+  right: 3rem;
 }
 .icon-output-block .icon-img {
   width: 6rem;
@@ -350,7 +365,10 @@ body {
   width: 8rem;
   height: 8rem;
 }
-.icon1-Output , .icon2-Output  ,.icon3-Output {
+.icon1-Output-left , .icon2-Output-left  ,.icon3-Output-left {
+  display: none;
+}
+.icon-output-block-right{
   display: none;
 }
 .player2-username {

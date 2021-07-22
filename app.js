@@ -42,15 +42,34 @@ RulesBackBtn.addEventListener("click", e => {
     rulesPage.style.display = 'block';
 });
 
+const icon1Output = document.querySelector(".icon1-Output-left");
+const icon2Output = document.querySelector(".icon2-Output-left");
+const icon3Output = document.querySelector(".icon3-Output-left");
+const iconOutputRight = document.querySelector(".icon-output-right");
+const iconImg = document.querySelector(".icon-img");
+
 const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
 player1IconBtn1.addEventListener("click", e => {
-    document.querySelector(".icon1-Output").style.display = "block";
+    icon1Output.style.display = "block";
+    randomIcons();
 });
 const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
 player1IconBtn2.addEventListener("click", e => {
-    document.querySelector(".icon2-Output").style.display = "block";
+    icon2Output.style.display = "block";
+    randomIcons();
 });
 const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
 player1IconBtn3.addEventListener("click", e => {
-    document.querySelector(".icon3-Output").style.display = "block";
+    icon3Output.style.display = "block";
+    randomIcons();
 });
+
+let iconOptions = new Array("img/paper-img.png", "img/rock-img.png", "img/Scissors-img.png");
+const rightIconOutput = document.querySelector(".icon-output-block-right");
+
+function randomIcons() {
+    rightIconOutput.style.display = "block";
+    let randomIcon = Math.floor(Math.random() * iconOptions.length);
+    document.getElementById("randomOutput").src = iconOptions[randomIcon];
+}
+
