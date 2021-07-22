@@ -31,6 +31,7 @@ startBtn.addEventListener("click", e => {
     gamePage.style.display = 'block';
     rulesPage.style.display = 'none';
     playerName();
+    randomProfilePic() ;
 });
 function playerName() {
     player1Name.innerHTML = playerUsername.value;
@@ -73,3 +74,15 @@ function randomIcons() {
     document.getElementById("randomOutput").src = iconOptions[randomIcon];
 }
 
+const player1Pic = document.querySelector(".player1-profile-pic");
+const player2Pic = document.querySelector(".player2-profile-pic");
+
+let player1ProfilePic = new Array("img/profile-img1.png", "img/profile-img3.png", "img/profile-img4.png", "img/profile-img6.png");
+let player2ProfilePic = new Array("img/profile-img2.png", "img/profile-img5.png", "img/profile-img7.png", "img/profile-img8.png");
+
+function randomProfilePic() {
+    let randomPlayer1Pic = Math.floor(Math.random() * player1ProfilePic.length);
+    player1Pic.src = player1ProfilePic[randomPlayer1Pic];
+    let randomPlayer2Pic = Math.floor(Math.random() * player2ProfilePic.length);
+    player2Pic.src = player2ProfilePic[randomPlayer2Pic];
+}
