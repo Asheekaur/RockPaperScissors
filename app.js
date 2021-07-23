@@ -50,25 +50,42 @@ const icon3Output = document.querySelector(".icon3-Output-left");
 const iconOutputRight = document.querySelector(".icon-output-right");
 const iconImg = document.querySelector(".icon-img");
 
+
 function ClickIcon() {
     const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
     player1IconBtn1.addEventListener("click", e => {
         icon1Output.style.display = "block";
+        player1IconBtn1.disabled = true;
+        player1IconBtn2.disabled = true;
+        player1IconBtn3.disabled = true;
         randomIcons();
+        StopTimer();
+        restart();
     });
     const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
     player1IconBtn2.addEventListener("click", e => {
         icon2Output.style.display = "block";
+        player1IconBtn1.disabled = true;
+        player1IconBtn2.disabled = true;
+        player1IconBtn3.disabled = true;
         randomIcons();
+        StopTimer();
+        restart();
     });
     const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
     player1IconBtn3.addEventListener("click", e => {
         icon3Output.style.display = "block";
+        player1IconBtn1.disabled = true;
+        player1IconBtn2.disabled = true;
+        player1IconBtn3.disabled = true;
         randomIcons();
+        StopTimer();
+        restart();
     });
 }
 
 let iconOptions = new Array("img/paper-img.png", "img/rock-img.png", "img/Scissors-img.png");
+const leftIconOutput = document.querySelector(".icon-output-block-left");
 const rightIconOutput = document.querySelector(".icon-output-block-right");
 
 function randomIcons() {
@@ -91,6 +108,7 @@ function randomProfilePic() {
 }
 
 let secs = 1 * 10;
+let OnClickTimerStop;
 
 function countdown() {
     document.querySelector(".start-timer").style.display = "none";
@@ -118,10 +136,24 @@ function decrement() {
         else {
             document.querySelector(".timer").innerHTML = "00:" + secs--;
         }
-        setTimeout('decrement()', 1000);
+        OnClickTimerStop = setTimeout('decrement()', 1000);
     }
 }
 
 function getseconds() {
     return secs - Math.round(1 * 10);
 }
+function StopTimer() {
+    clearTimeout(OnClickTimerStop);
+}
+function restart() {
+    setTimeout(function () {
+        document.querySelector(".start-timer").style.display = "block";
+        document.querySelector(".timer").style.display = "none";
+        leftIconOutput.style.display = "none";
+        rightIconOutput.style.display = "none";
+    }, 2000);
+}
+
+
+
