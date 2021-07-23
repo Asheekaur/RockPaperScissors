@@ -30,18 +30,19 @@ backBtn.addEventListener("click", e => {
 startBtn.addEventListener("click", e => {
     gamePage.style.display = 'block';
     rulesPage.style.display = 'none';
+    document.querySelector(".timer-block").style.display = "block";
     playerName();
-    randomProfilePic() ;
+    randomProfilePic();
 });
 function playerName() {
-    player1Name.innerHTML = playerUsername.value;
-    let randomName = Math.floor(Math.random() * player2Names.length);
-    player2Name.innerHTML = player2Names[randomName];
-}
+        player1Name.innerHTML = playerUsername.value;
+        let randomName = Math.floor(Math.random() * player2Names.length);
+        player2Name.innerHTML = player2Names[randomName];
+    }
 RulesBackBtn.addEventListener("click", e => {
-    gamePage.style.display = 'none';
-    rulesPage.style.display = 'block';
-});
+        gamePage.style.display = 'none';
+        rulesPage.style.display = 'block';
+    });
 
 const icon1Output = document.querySelector(".icon1-Output-left");
 const icon2Output = document.querySelector(".icon2-Output-left");
@@ -85,4 +86,39 @@ function randomProfilePic() {
     player1Pic.src = player1ProfilePic[randomPlayer1Pic];
     let randomPlayer2Pic = Math.floor(Math.random() * player2ProfilePic.length);
     player2Pic.src = player2ProfilePic[randomPlayer2Pic];
+}
+
+let secs = 1 * 10;
+
+function countdown() {
+    document.querySelector(".start-timer").style.display = "none";
+    document.querySelector(".timer").style.display = "block";
+    setTimeout('decrement()', 10);
+}
+
+function decrement() {
+    seconds = document.querySelector(".seconds");
+    if (seconds < 10) {
+        seconds.value = secs;
+    }
+    else {
+        seconds.value = getseconds();
+    }
+    if (secs < 0) {
+        document.querySelector(".times-up").style.display = "block";
+        document.querySelector(".timer").style.display = "none";
+    }
+    else {
+        if (secs < 10) {
+            document.querySelector(".timer").innerHTML = "00:" + "0" + secs--;
+        }
+        else {
+            document.querySelector(".timer").innerHTML = "00:" + secs--;
+        }
+        setTimeout('decrement()', 1000);
+    }
+}
+
+function getseconds() {
+    return secs - Math.round(1 * 10);
 }

@@ -108,6 +108,7 @@
     </section>
     <!-- end of rules page -->
 
+
     <!-- game page  -->
     <section class="game-page">
         <nav class="score-bar">
@@ -116,16 +117,13 @@
             <li>win<span>0</span></li>
         </nav>
 
-        <div class="timer-block">
-            <p class="timer"></p>
-        </div>
-
         <section class="game-blocks">
 
             <div class="player1-game-block">
                 <div class="player1-username">
                     <p>player 1</p>
-                    <span class="block-1"> <img src="" class="player1-profile-pic" class="user1-a" alt="loading..."> </span>
+                    <span class="block-1"> <img src="" class="player1-profile-pic" class="user1-a" alt="loading...">
+                    </span>
                 </div>
                 <p class="player1-name"></p>
                 <div class="player1-game-icons">
@@ -188,7 +186,18 @@
             <button> Back <img src="img/back-arrow.png" alt="loading..."></button>
         </div>
     </section>
+
+    <!-- Game timer section -->
+    <section class="timer-block" hidden>
+        <button class="start-timer" onclick="countdown();">START</button>
+        <button class="timer seconds"></button>
+        <button class="times-up"> Ops,Time Up </button>
+    </section>
+    <!-- end of Game timer section-->
+
     <!-- end of game page  -->
+
+
 
     <script src="app.js"></script>
 </body>
