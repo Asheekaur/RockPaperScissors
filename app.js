@@ -35,14 +35,14 @@ startBtn.addEventListener("click", e => {
     randomProfilePic();
 });
 function playerName() {
-        player1Name.innerHTML = playerUsername.value;
-        let randomName = Math.floor(Math.random() * player2Names.length);
-        player2Name.innerHTML = player2Names[randomName];
-    }
+    player1Name.innerHTML = playerUsername.value;
+    let randomName = Math.floor(Math.random() * player2Names.length);
+    player2Name.innerHTML = player2Names[randomName];
+}
 RulesBackBtn.addEventListener("click", e => {
-        gamePage.style.display = 'none';
-        rulesPage.style.display = 'block';
-    });
+    gamePage.style.display = 'none';
+    rulesPage.style.display = 'block';
+});
 
 const icon1Output = document.querySelector(".icon1-Output-left");
 const icon2Output = document.querySelector(".icon2-Output-left");
@@ -50,21 +50,23 @@ const icon3Output = document.querySelector(".icon3-Output-left");
 const iconOutputRight = document.querySelector(".icon-output-right");
 const iconImg = document.querySelector(".icon-img");
 
-const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
-player1IconBtn1.addEventListener("click", e => {
-    icon1Output.style.display = "block";
-    randomIcons();
-});
-const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
-player1IconBtn2.addEventListener("click", e => {
-    icon2Output.style.display = "block";
-    randomIcons();
-});
-const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
-player1IconBtn3.addEventListener("click", e => {
-    icon3Output.style.display = "block";
-    randomIcons();
-});
+function ClickIcon() {
+    const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
+    player1IconBtn1.addEventListener("click", e => {
+        icon1Output.style.display = "block";
+        randomIcons();
+    });
+    const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
+    player1IconBtn2.addEventListener("click", e => {
+        icon2Output.style.display = "block";
+        randomIcons();
+    });
+    const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
+    player1IconBtn3.addEventListener("click", e => {
+        icon3Output.style.display = "block";
+        randomIcons();
+    });
+}
 
 let iconOptions = new Array("img/paper-img.png", "img/rock-img.png", "img/Scissors-img.png");
 const rightIconOutput = document.querySelector(".icon-output-block-right");
@@ -94,6 +96,7 @@ function countdown() {
     document.querySelector(".start-timer").style.display = "none";
     document.querySelector(".timer").style.display = "block";
     setTimeout('decrement()', 10);
+    ClickIcon();
 }
 
 function decrement() {
