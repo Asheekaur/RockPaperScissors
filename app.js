@@ -42,6 +42,7 @@ function playerName() {
 RulesBackBtn.addEventListener("click", e => {
     gamePage.style.display = 'none';
     rulesPage.style.display = 'block';
+    document.querySelector(".timer-block").style.display = "none";
 });
 
 const icon1Output = document.querySelector(".icon1-Output-left");
@@ -50,38 +51,43 @@ const icon3Output = document.querySelector(".icon3-Output-left");
 const iconOutputRight = document.querySelector(".icon-output-right");
 const iconImg = document.querySelector(".icon-img");
 
+const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
+const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
+const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
 
 function ClickIcon() {
-    const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
     player1IconBtn1.addEventListener("click", e => {
         icon1Output.style.display = "block";
-        player1IconBtn1.disabled = true;
-        player1IconBtn2.disabled = true;
-        player1IconBtn3.disabled = true;
+        disabledBtn();
         randomIcons();
         StopTimer();
         restart();
     });
-    const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
     player1IconBtn2.addEventListener("click", e => {
         icon2Output.style.display = "block";
-        player1IconBtn1.disabled = true;
-        player1IconBtn2.disabled = true;
-        player1IconBtn3.disabled = true;
+        disabledBtn();
         randomIcons();
         StopTimer();
         restart();
     });
-    const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
     player1IconBtn3.addEventListener("click", e => {
         icon3Output.style.display = "block";
-        player1IconBtn1.disabled = true;
-        player1IconBtn2.disabled = true;
-        player1IconBtn3.disabled = true;
+        disabledBtn();
         randomIcons();
         StopTimer();
         restart();
     });
+}
+
+function disabledBtn() {
+    player1IconBtn1.disabled = true;
+    player1IconBtn2.disabled = true;
+    player1IconBtn3.disabled = true;
+}
+function workingBtn() {
+    player1IconBtn1.disabled = false;
+    player1IconBtn2.disabled = false;
+    player1IconBtn3.disabled = false;
 }
 
 let iconOptions = new Array("img/paper-img.png", "img/rock-img.png", "img/Scissors-img.png");
@@ -89,6 +95,7 @@ const leftIconOutput = document.querySelector(".icon-output-block-left");
 const rightIconOutput = document.querySelector(".icon-output-block-right");
 
 function randomIcons() {
+    leftIconOutput.style.display = "block";
     rightIconOutput.style.display = "block";
     let randomIcon = Math.floor(Math.random() * iconOptions.length);
     document.getElementById("randomOutput").src = iconOptions[randomIcon];
@@ -111,6 +118,7 @@ let secs = 1 * 10;
 let OnClickTimerStop;
 
 function countdown() {
+    workingBtn();
     document.querySelector(".start-timer").style.display = "none";
     document.querySelector(".timer").style.display = "block";
     setTimeout('decrement()', 10);
@@ -152,8 +160,6 @@ function restart() {
         document.querySelector(".timer").style.display = "none";
         leftIconOutput.style.display = "none";
         rightIconOutput.style.display = "none";
-    }, 2000);
+        secs = 1 * 10;
+    }, 3000)
 }
-
-
-
