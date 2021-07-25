@@ -55,8 +55,12 @@ const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
 const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
 const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
 
+
+let playerChoice;
+
 function ClickIcon() {
     player1IconBtn1.addEventListener("click", e => {
+        playerChoice = 1;
         icon1Output.style.display = "block";
         disabledBtn();
         randomIcons();
@@ -64,6 +68,7 @@ function ClickIcon() {
         restart();
     });
     player1IconBtn2.addEventListener("click", e => {
+        playerChoice = 2;
         icon2Output.style.display = "block";
         disabledBtn();
         randomIcons();
@@ -71,6 +76,7 @@ function ClickIcon() {
         restart();
     });
     player1IconBtn3.addEventListener("click", e => {
+        playerChoice = 3;
         icon3Output.style.display = "block";
         disabledBtn();
         randomIcons();
@@ -90,16 +96,9 @@ function workingBtn() {
     player1IconBtn3.disabled = false;
 }
 
-let iconOptions = new Array("img/paper-img.png", "img/rock-img.png", "img/Scissors-img.png");
 const leftIconOutput = document.querySelector(".icon-output-block-left");
 const rightIconOutput = document.querySelector(".icon-output-block-right");
 
-function randomIcons() {
-    leftIconOutput.style.display = "block";
-    rightIconOutput.style.display = "block";
-    let randomIcon = Math.floor(Math.random() * iconOptions.length);
-    document.getElementById("randomOutput").src = iconOptions[randomIcon];
-}
 
 const player1Pic = document.querySelector(".player1-profile-pic");
 const player2Pic = document.querySelector(".player2-profile-pic");
@@ -162,4 +161,33 @@ function restart() {
         rightIconOutput.style.display = "none";
         secs = 1 * 10;
     }, 3000)
+}
+
+
+let tie = document.querySelector(".tie");
+let player1Score = document.querySelector(".player1-score");
+let player2Score = document.querySelector(".player2-score");
+let tiePoints = 0;
+let player1Points = 0;
+let player2Points = 0;
+
+function randomIcons() {
+
+    leftIconOutput.style.display = "block";
+    rightIconOutput.style.display = "block";
+
+    var randomIcons = Math.floor(Math.random() * 3 + 1);
+
+    if (randomIcons === 1) {
+        document.getElementById("randomOutput").src = "img/rock-img.png";
+    }
+
+    if (randomIcons === 2) {
+        document.getElementById("randomOutput").src = "img/paper-img.png";
+    }
+
+    if (randomIcons === 3) {
+        document.getElementById("randomOutput").src = "img/scissors-img.png";
+    }
+
 }
