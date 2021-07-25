@@ -190,4 +190,25 @@ function randomIcons() {
         document.getElementById("randomOutput").src = "img/scissors-img.png";
     }
 
+    // tie
+    if (playerChoice === randomIcons) {
+        tie.innerHTML = ++tiePoints;
+    }
+
+    // player1 wins
+    else if (playerChoice === 1 && randomIcons === 3) {
+        player1Score.innerHTML = ++player1Points;
+    }
+    else if (playerChoice === 3 && randomIcons === 2) {
+        player1Score.innerHTML = ++player1Points;
+    }
+    else if (playerChoice === 2 && randomIcons === 1) {
+        player1Score.innerHTML = ++player1Points;
+    }
+
+    // player2 wins
+    else {
+        player2Score.innerHTML = ++player2Points;
+    }
+    
 }
