@@ -61,26 +61,26 @@ let playerChoice;
 function ClickIcon() {
     player1IconBtn1.addEventListener("click", e => {
         playerChoice = 1;
-        icon1Output.style.display = "block";
+        document.getElementById("playerOutput").src = "img/rock-img.png";
         disabledBtn();
         randomIcons();
-        StopTimer();
+        stopTimer();
         restart();
     });
     player1IconBtn2.addEventListener("click", e => {
         playerChoice = 2;
-        icon2Output.style.display = "block";
+        document.getElementById("playerOutput").src = "img/paper-img.png";
         disabledBtn();
         randomIcons();
-        StopTimer();
+        stopTimer();
         restart();
     });
     player1IconBtn3.addEventListener("click", e => {
         playerChoice = 3;
-        icon3Output.style.display = "block";
+        document.getElementById("playerOutput").src = "img/Scissors-img.png";
         disabledBtn();
         randomIcons();
-        StopTimer();
+        stopTimer();
         restart();
     });
 }
@@ -150,7 +150,7 @@ function decrement() {
 function getseconds() {
     return secs - Math.round(1 * 10);
 }
-function StopTimer() {
+function stopTimer() {
     clearTimeout(OnClickTimerStop);
 }
 function restart() {
@@ -176,7 +176,7 @@ function randomIcons() {
     leftIconOutput.style.display = "block";
     rightIconOutput.style.display = "block";
 
-    var randomIcons = Math.floor(Math.random() * 3 + 1);
+    let randomIcons = Math.floor(Math.random() * 3 + 1);
 
     if (randomIcons === 1) {
         document.getElementById("randomOutput").src = "img/rock-img.png";

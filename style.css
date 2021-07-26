@@ -379,9 +379,7 @@ body {
   width: 8rem;
   height: 8rem;
 }
-.icon1-Output-left,
-.icon2-Output-left,
-.icon3-Output-left {
+.icon-output-block-left{
   display: none;
 }
 .icon-output-block-right {
