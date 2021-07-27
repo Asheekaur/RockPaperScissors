@@ -5,13 +5,10 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #2b6777;
 }
-
 /* score section */
-
 .home-page {
   display: block;
 }
-
 .score-container {
   border: 2px solid #ffffff;
   width: 40rem;
@@ -22,7 +19,6 @@ body {
   display: flex;
   flex-direction: row;
 }
-
 .game-name {
   display: flex;
   flex-direction: column;
@@ -32,7 +28,6 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-
 .game-name p {
   margin-top: 0;
   margin-bottom: 0;
@@ -47,9 +42,7 @@ body {
   height: 6rem;
   border-radius: 0.3rem;
 }
-
 /* end of score section */
-
 /* game image section */
 .game-image {
   margin-top: 6rem;
@@ -73,9 +66,7 @@ body {
 #game-img-3 {
   border: 20px solid rgb(214, 108, 94);
 }
-
 /* end of game image section */
-
 /* player name  section*/
 .player-name {
   text-align: center;
@@ -102,9 +93,7 @@ body {
   letter-spacing: 0.1rem;
 }
 /* end of  player name section */
-
 /* rules button section  */
-
 .rules-btn {
   position: absolute;
   right: 1rem;
@@ -127,9 +116,7 @@ body {
 .rules-btn img {
   width: 1.2rem;
 }
-
 /* end of rules button section  */
-
 /* rules page */
 .rules-page {
   display: none;
@@ -200,11 +187,8 @@ body {
   left: 1rem;
   bottom: 1rem;
 }
-
 /* end of rules page */
-
 /* game page  */
-
 .game-page {
   display: none;
 }
@@ -310,7 +294,7 @@ body {
 #game-img-3 {
   border: 10px solid rgb(214, 108, 94);
 }
-.timer-block button{
+.timer-block button {
   position: absolute;
   top: 28%;
   left: 46.6%;
@@ -379,7 +363,7 @@ body {
   width: 8rem;
   height: 8rem;
 }
-.icon-output-block-left{
+.icon-output-block-left {
   display: none;
 }
 .icon-output-block-right {
