@@ -118,7 +118,8 @@ body {
   font-weight: 550;
 }
 .rules-btn button:hover,
-.rules-page button:hover {
+.rules-page button:hover,
+.restart-btn button {
   color: #52ab98;
 }
 .rules-btn img,
@@ -312,7 +313,8 @@ body {
   font-size: 1.5rem;
   color: #f2f2f2;
 }
-.winner-name,.output-para{
+.winner-name,
+.output-para {
   text-align: center;
   font-weight: 700;
   font-style: italic;
@@ -381,3 +383,31 @@ body {
   right: 10.5%;
 }
 /* end of game page  */
+/* winner page */
+.winner-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  margin-top: 9rem;
+}
+.winner-heading img {
+  width: 1rem;
+}
+#winner-name {
+  color: gold;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+.lose-player-points {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #c8d8e4;
+  margin-top: 12rem;
+}
+/* end of winner page */

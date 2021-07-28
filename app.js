@@ -140,6 +140,15 @@ function restart() {
         setTimeout(function () {
             document.querySelector(".game-page").style.display = "none";
             document.querySelector(".timer-block").style.display = "none";
+            document.getElementById("winner").style.display = "block";
+            if (player1Points === 5) {
+                document.getElementById("winner-name").innerHTML = playerUsername.value;
+                document.querySelector(".lose-player-points").innerHTML = `${player2Name.innerHTML} lose by  ${5 - player2Score.innerHTML}`;
+            }
+            else {
+                document.getElementById("winner-name").innerHTML = player2Name.innerHTML;
+                document.querySelector(".lose-player-points").innerHTML = `${playerUsername.value} lose by  ${5 - player1Score.innerHTML}`;
+            }
         }, 2000)
     }
     else {
@@ -151,7 +160,7 @@ function restart() {
             outputPara.style.display = "none";
             winningPoints.style.display = "none";
             secs = 1 * 10;
-        }, 9000)
+        }, 2000)
     }
 }
 let tie = document.querySelector(".tie");
