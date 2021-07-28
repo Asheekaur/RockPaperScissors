@@ -27,11 +27,14 @@ startBtn.addEventListener("click", e => {
     gamePage.style.display = 'block';
     rulesPage.style.display = 'none';
     document.querySelector(".timer-block").style.display = "block";
-    playerName();
+    player1Username();
+    player2Username();
     randomProfilePic();
 });
-function playerName() {
+function player1Username() {
     player1Name.innerHTML = playerUsername.value;
+}
+function player2Username() {
     let randomName = Math.floor(Math.random() * player2Names.length);
     player2Name.innerHTML = player2Names[randomName];
 }
@@ -133,23 +136,37 @@ function stopTimer() {
     clearTimeout(OnClickTimerStop);
 }
 function restart() {
-    setTimeout(function () {
-        document.querySelector(".start-timer").style.display = "block";
-        document.querySelector(".timer").style.display = "none";
-        leftIconOutput.style.display = "none";
-        rightIconOutput.style.display = "none";
-        secs = 1 * 10;
-    }, 3000)
+    if (player1Points === 5 || player2Points === 5) {
+        setTimeout(function () {
+            document.querySelector(".game-page").style.display = "none";
+            document.querySelector(".timer-block").style.display = "none";
+        }, 2000)
+    }
+    else {
+        setTimeout(function () {
+            document.querySelector(".start-timer").style.display = "block";
+            document.querySelector(".timer").style.display = "none";
+            leftIconOutput.style.display = "none";
+            rightIconOutput.style.display = "none";
+            outputPara.style.display = "none";
+            winningPoints.style.display = "none";
+            secs = 1 * 10;
+        }, 9000)
+    }
 }
 let tie = document.querySelector(".tie");
 let player1Score = document.querySelector(".player1-score");
 let player2Score = document.querySelector(".player2-score");
+let outputPara = document.querySelector(".output-para");
+let winningPoints = document.querySelector(".winner-name");
 let tiePoints = 0;
 let player1Points = 0;
 let player2Points = 0;
 function randomIcons() {
     leftIconOutput.style.display = "block";
     rightIconOutput.style.display = "block";
+    outputPara.style.display = "block";
+    winningPoints.style.display = "block";
     let randomIcon = Math.floor(Math.random() * 3 + 1);
     if (randomIcon === 1) {
         document.getElementById("randomOutput").src = "img/rock1.jpg";
@@ -166,15 +183,45 @@ function randomIcons() {
     if (playerChoice === randomIcon) {
         tiePoints += 1;
         tie.innerHTML = tiePoints;
+        winningPoints.innerHTML = "Ops, Tie"
+        outputPara.innerHTML = "Play again !";
     }
     // player1 wins
-    else if ((playerChoice === 1 && randomIcon === 3) || (playerChoice === 3 && randomIcon === 2) || (playerChoice === 2 && randomIcon === 1)) {
+    else if (playerChoice === 1 && randomIcon === 3) {
         player1Points += 1;
         player1Score.innerHTML = player1Points;
+        outputPara.innerHTML = "Rock beats Scissors ";
+        winningPoints.innerHTML = `${playerUsername.value} got 1 point `;
+    }
+    else if (playerChoice === 3 && randomIcon === 2) {
+        player1Points += 1;
+        player1Score.innerHTML = player1Points;
+        outputPara.innerHTML = "Scissors beats Paper";
+        winningPoints.innerHTML = `${playerUsername.value} got 1 point `;
+    }
+    else if (playerChoice === 2 && randomIcon === 1) {
+        player1Points += 1;
+        player1Score.innerHTML = player1Points;
+        outputPara.innerHTML = "Paper beats Rock";
+        winningPoints.innerHTML = `${playerUsername.value} got 1 point `;
     }
     // player1 lose
-    else {
+    else if (playerChoice === 3 && randomIcon === 1) {
         player2Points += 1;
         player2Score.innerHTML = player2Points;
+        outputPara.innerHTML = "Rock beats Scissors ";
+        winningPoints.innerHTML = `${player2Name.innerHTML} got 1 point `;
+    }
+    else if (playerChoice === 2 && randomIcon === 3) {
+        player2Points += 1;
+        player2Score.innerHTML = player2Points;
+        outputPara.innerHTML = "Scissors beats Paper";
+        winningPoints.innerHTML = `${player2Name.innerHTML} got 1 point `;
+    }
+    else if (playerChoice === 1 && randomIcon === 2) {
+        player2Points += 1;
+        player2Score.innerHTML = player2Points;
+        outputPara.innerHTML = "Paper beats Rock";
+        winningPoints.innerHTML = `${player2Name.innerHTML} got 1 point `;
     }
 }
