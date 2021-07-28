@@ -49,30 +49,31 @@ const player1IconBtn1 = document.querySelector(".player1-icon-btn1");
 const player1IconBtn2 = document.querySelector(".player1-icon-btn2");
 const player1IconBtn3 = document.querySelector(".player1-icon-btn3");
 let playerChoice;
-    player1IconBtn1.addEventListener("click", e => {
-        playerChoice = 1;
-        document.getElementById("playerOutput").src = "img/rock-img.png";
-        disabledBtn();
-        randomIcons();
-        stopTimer();
-        restart();
-    });
-    player1IconBtn2.addEventListener("click", e => {
-        playerChoice = 2;
-        document.getElementById("playerOutput").src = "img/paper-img.png";
-        disabledBtn();
-        randomIcons();
-        stopTimer();
-        restart();
-    });
-    player1IconBtn3.addEventListener("click", e => {
-        playerChoice = 3;
-        document.getElementById("playerOutput").src = "img/Scissors-img.png";
-        disabledBtn();
-        randomIcons();
-        stopTimer();
-        restart();
-    });
+disabledBtn();
+player1IconBtn1.addEventListener("click", e => {
+    playerChoice = 1;
+    document.getElementById("playerOutput").src = "img/rock1.jpg";
+    disabledBtn();
+    randomIcons();
+    stopTimer();
+    restart();
+});
+player1IconBtn2.addEventListener("click", e => {
+    playerChoice = 2;
+    document.getElementById("playerOutput").src = "img/paper1.jpg";
+    disabledBtn();
+    randomIcons();
+    stopTimer();
+    restart();
+});
+player1IconBtn3.addEventListener("click", e => {
+    playerChoice = 3;
+    document.getElementById("playerOutput").src = "img/scissors1.png";
+    disabledBtn();
+    randomIcons();
+    stopTimer();
+    restart();
+});
 function disabledBtn() {
     player1IconBtn1.disabled = true;
     player1IconBtn2.disabled = true;
@@ -138,7 +139,7 @@ function restart() {
         leftIconOutput.style.display = "none";
         rightIconOutput.style.display = "none";
         secs = 1 * 10;
-    },2000)
+    }, 3000)
 }
 let tie = document.querySelector(".tie");
 let player1Score = document.querySelector(".player1-score");
@@ -151,32 +152,29 @@ function randomIcons() {
     rightIconOutput.style.display = "block";
     let randomIcon = Math.floor(Math.random() * 3 + 1);
     if (randomIcon === 1) {
-        document.getElementById("randomOutput").src = "img/rock-img.png";
+        document.getElementById("randomOutput").src = "img/rock1.jpg";
     }
 
     if (randomIcon === 2) {
-        document.getElementById("randomOutput").src = "img/paper-img.png";
+        document.getElementById("randomOutput").src = "img/paper1.jpg";
     }
 
     if (randomIcon === 3) {
-        document.getElementById("randomOutput").src = "img/scissors-img.png";
+        document.getElementById("randomOutput").src = "img/scissors1.png";
     }
     // tie
     if (playerChoice === randomIcon) {
         tiePoints += 1;
         tie.innerHTML = tiePoints;
-        console.log(  tie.innerHTML = tiePoints);
     }
     // player1 wins
     else if ((playerChoice === 1 && randomIcon === 3) || (playerChoice === 3 && randomIcon === 2) || (playerChoice === 2 && randomIcon === 1)) {
         player1Points += 1;
         player1Score.innerHTML = player1Points;
-        console.log( player1Score.innerHTML = player1Points);
     }
     // player1 lose
     else {
         player2Points += 1;
         player2Score.innerHTML = player2Points;
-        console.log( player2Score.innerHTML = player2Points);
     }
 }

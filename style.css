@@ -3,7 +3,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  background-color: #2b6777;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(img/background-img.jpg) center no-repeat;
+  background-size: cover;
+  height: 92vh;
 }
 /* score section */
 .home-page {
@@ -34,38 +37,39 @@ body {
   font-weight: bolder;
   letter-spacing: 0.1rem;
 }
-.game-gif {
-  margin-left: 19.8rem;
+.game-name-img {
+  margin-left: 19.2rem;
+  margin-top: -1.6rem;
 }
-.game-gif img {
-  width: 9rem;
-  height: 6rem;
+.game-name-img img {
+  width: 10.5rem;
+  height: 9rem;
   border-radius: 0.3rem;
 }
 /* end of score section */
 /* game image section */
 .game-image {
-  margin-top: 6rem;
+  margin-top: 7rem;
   text-align: center;
 }
 .icons {
-  width: 10rem;
-  height: 9.5rem;
+  width: 7rem;
+  height: 7rem;
   margin-right: 2rem;
   margin-left: 2rem;
-  border-radius: 8rem;
   background-color: #ffffff;
   cursor: pointer;
+  border-radius: 5rem;
 }
 #game-img-1 {
-  border: 20px solid rgb(68, 130, 172);
+  border: 11px solid rgb(68, 130, 172);
 }
 #game-img-2 {
-  border: 20px solid rgb(240, 240, 94);
+  border: 11px solid rgb(240, 240, 94);
 }
 #game-img-3 {
-  border: 20px solid rgb(214, 108, 94);
-}
+  border: 11px solid rgb(214, 108, 94); 
+} 
 /* end of game image section */
 /* player name  section*/
 .player-name {
@@ -94,12 +98,15 @@ body {
 }
 /* end of  player name section */
 /* rules button section  */
-.rules-btn {
+.rules-btn,
+.start-btn {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
 }
-.rules-btn button {
+.rules-btn button,
+.rules-page button,
+.back-btn-2 button {
   font-size: 1.4rem;
   padding: 0.4rem 0.6rem;
   border: 3px solid #ffffff;
@@ -110,15 +117,20 @@ body {
   cursor: pointer;
   font-weight: 550;
 }
-.rules-btn button:hover {
+.rules-btn button:hover,
+.rules-page button:hover {
   color: #52ab98;
 }
-.rules-btn img {
+.rules-btn img ,
+.rules-page img,
+.back-btn-2 img {
   width: 1.2rem;
 }
 /* end of rules button section  */
 /* rules page */
-.rules-page {
+.rules-page,
+.icon-output-block-left,
+.icon-output-block-right {
   display: none;
 }
 .rules-page h1 {
@@ -159,30 +171,8 @@ body {
   font-size: 1.1rem;
   padding-left: 5rem;
 }
-.start-btn {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-}
-.rules-page button {
-  font-size: 1.4rem;
-  padding: 0.4rem 0.6rem;
-  border: 3px solid #ffffff;
-  background-color: #c8d8e4;
-  border-radius: 0.3rem;
-  color: #2b6777;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 550;
-  cursor: pointer;
-}
-.rules-page button:hover {
-  color: #52ab98;
-}
-.rules-page img {
-  width: 1.2rem;
-}
-.back-btn-1 {
+.back-btn-1,
+.back-btn-2 {
   position: absolute;
   left: 1rem;
   bottom: 1rem;
@@ -190,7 +180,7 @@ body {
 /* end of rules page */
 /* game page  */
 .game-page {
-  display: none;
+  display:none;
 }
 .score-bar {
   display: flex;
@@ -218,7 +208,8 @@ body {
   top: 28%;
   margin: 0;
 }
-.player1-username p {
+.player1-username p,
+.player2-username p {
   font-size: 2rem;
   width: 18rem;
   padding: 0.6rem 0.2rem;
@@ -233,7 +224,8 @@ body {
   margin: 0 0;
   cursor: pointer;
 }
-.block-1 {
+.block-1,
+.block-2 {
   border: 3px solid #c8d8e4;
   width: 7rem;
   height: 7rem;
@@ -241,7 +233,8 @@ body {
   margin: 3rem auto;
   border-radius: 0.3rem;
 }
-.player1-username span img {
+.player1-username span img,
+.player2-username span img {
   width: 6.5rem;
   height: 6.5rem;
   align-items: center;
@@ -249,12 +242,15 @@ body {
   margin: auto;
 }
 .player1-name {
-  width: 12rem;
-  margin: auto auto;
-  text-align: center;
   position: fixed;
   bottom: 35%;
   left: 10.5%;
+}
+.player1-name,
+.player2-name {
+  width: 12rem;
+  margin: auto auto;
+  text-align: center;
   font-size: 1.4rem;
   color: #f2f2f2;
   text-transform: capitalize;
@@ -266,32 +262,30 @@ body {
 }
 .icon-img {
   width: 4.8rem;
-  height: 4.5rem;
+  height: 4.8rem;
 }
-.player1-game-icons button {
+.player1-game-icons button,
+.player2-game-icons button {
   margin-right: 0.7rem;
   margin-left: 0.7rem;
   cursor: pointer;
 }
-.icon {
-  background-color: #ffffff;
-  cursor: pointer;
-}
-#game-img-1,
-#game-img-2,
-#game-img-3 {
-  width: 6.3rem;
-  height: 6.3rem;
+#game-img-4,
+#game-img-5,
+#game-img-6 {
+  width: 7rem;
+  height: 7rem;
+  background:#f2f2f2;
   border-radius: 9rem;
   padding: 0;
 }
-#game-img-1 {
+#game-img-4 {
   border: 10px solid rgb(68, 130, 172);
 }
-#game-img-2 {
+#game-img-5 {
   border: 10px solid rgb(240, 240, 94);
 }
-#game-img-3 {
+#game-img-6 {
   border: 10px solid rgb(214, 108, 94);
 }
 .timer-block button {
@@ -323,7 +317,6 @@ body {
   position: absolute;
   left: 44%;
 }
-
 .icon-output-block {
   border: 3px solid white;
   width: 25rem;
@@ -333,14 +326,7 @@ body {
   top: 42%;
   border-radius: 1rem;
 }
-.icon-output-block-left button {
-  position: absolute;
-  top: 7.5rem;
-  left: 3rem;
-}
-#game-btn-img-1,
-#game-btn-img-2,
-#game-btn-img-3 {
+#game-btn-img-1 {
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 5rem;
@@ -348,26 +334,19 @@ body {
   border: 10px solid #52ab98;
   background: #ffffff;
 }
+.icon-output-block-left button {
+  position: absolute;
+  top: 7.5rem;
+  left: 3rem;
+}
 .icon-output-block-right button {
   position: absolute;
   top: 7.5rem;
   right: 3rem;
 }
-.icon-output-block .icon-img {
-  width: 6rem;
-  height: 6rem;
-}
-.icon-output-block #game-img-1,
-.icon-output-block #game-img-2,
-.icon-output-block #game-img-3 {
-  width: 8rem;
-  height: 8rem;
-}
-.icon-output-block-left {
-  display: none;
-}
-.icon-output-block-right {
-  display: none;
+.output-icon-img{
+  width: 5.2rem;
+  height: 5.2rem;
 }
 .player2-username {
   position: absolute;
@@ -375,75 +354,14 @@ body {
   top: 28%;
   margin: 0;
 }
-.player2-username p {
-  font-size: 2rem;
-  width: 18rem;
-  padding: 0.6rem 0.2rem;
-  text-align: center;
-  border: 3px solid #c8d8e4;
-  background-color: #f2f2f2;
-  border-radius: 0.3rem;
-  color: #52ab98;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 550;
-  margin: 0 0;
-  cursor: pointer;
-}
 .player2-game-icons {
   position: absolute;
   bottom: 14%;
   right: 4%;
 }
-.player2-game-icons button {
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
-  cursor: pointer;
-}
-.block-2 {
-  border: 3px solid #c8d8e4;
-  width: 7rem;
-  height: 7rem;
-  display: flex;
-  margin: 3rem auto;
-  border-radius: 0.3rem;
-}
-.player2-username span img {
-  width: 6.5rem;
-  height: 6.5rem;
-  align-items: center;
-  border-radius: 0.3rem;
-  margin: auto;
-}
 .player2-name {
-  width: 12rem;
-  margin: auto auto;
-  text-align: center;
   position: fixed;
   bottom: 35%;
   right: 10.5%;
-  font-size: 1.4rem;
-  color: #f2f2f2;
-  text-transform: capitalize;
-}
-.back-btn-2 {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-}
-.game-page button {
-  font-size: 1.4rem;
-  padding: 0.4rem 0.6rem;
-  border: 3px solid #ffffff;
-  background-color: #ffffff;
-  border-radius: 0.3rem;
-  color: #2b6777;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 550;
-  cursor: pointer;
-}
-.back-btn-2 img {
-  width: 1.2rem;
 }
 /* end of game page  */
