@@ -391,14 +391,15 @@ body {
   font-size: 6rem;
   letter-spacing: 0.2rem;
   color: #ffffff;
-  margin-top: 9rem;
+  padding-top: 5rem;
+  margin: 0;
 }
 .winner-heading img {
   width: 1rem;
 }
 #winner-name {
   color: gold;
-  margin-top: 2rem;
+  margin-top: 5rem;
   text-transform: uppercase;
 }
 .lose-player-points {
@@ -411,18 +412,18 @@ body {
   margin-top: 12rem;
 }
 /* end of winner page */
-.btn-anim{
+.btn-anim {
   animation: anim 1.5s infinite;
 }
-@keyframes anim{
-  0%{
+@keyframes anim {
+  0% {
     transform: scale(0.9);
   }
-  70%{
+  70% {
     transform: scale(1);
     box-shadow: 0 0 0 6px rgba(189, 224, 248, 0.4);
   }
-  100%{
+  100% {
     transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(189, 224, 248, 0.4);
   }
