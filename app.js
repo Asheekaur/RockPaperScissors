@@ -149,19 +149,34 @@ function restart() {
                 document.getElementById("winner-name").innerHTML = player2Name.innerHTML;
                 document.querySelector(".lose-player-points").innerHTML = `${playerUsername.value} lose by  ${5 - player1Score.innerHTML}`;
             }
+            playAgain();
         }, 2000)
     }
     else {
-        setTimeout(function () {
-            document.querySelector(".start-timer").style.display = "block";
-            document.querySelector(".timer").style.display = "none";
-            leftIconOutput.style.display = "none";
-            rightIconOutput.style.display = "none";
-            outputPara.style.display = "none";
-            winningPoints.style.display = "none";
-            secs = 1 * 10;
-        }, 2000)
+        timerReset();
     }
+}
+function timerReset() {
+    setTimeout(function () {
+        document.querySelector(".start-timer").style.display = "block";
+        document.querySelector(".timer").style.display = "none";
+        leftIconOutput.style.display = "none";
+        rightIconOutput.style.display = "none";
+        outputPara.style.display = "none";
+        winningPoints.style.display = "none";
+        secs = 1 * 10;
+    }, 2000)
+}
+function playAgain() {
+    document.querySelector(".reset-btn").addEventListener("click", e => {
+        document.getElementById("winner").style.display = "none";
+        homePage.style.display = "block";
+        playerUsername.value = "";
+        tie.innerHTML = 0;
+        player1Score.innerHTML = 0;
+        player2Score.innerHTML = 0;
+        timerReset();
+    });
 }
 let tie = document.querySelector(".tie");
 let player1Score = document.querySelector(".player1-score");

@@ -126,7 +126,8 @@ body {
 }
 .rules-btn img,
 .rules-page img,
-.back-btn-2 img {
+.back-btn-2 img,
+.play-again-btn img {
   width: 1.2rem;
 }
 /* end of rules button section  */
@@ -144,7 +145,7 @@ body {
   letter-spacing: 0.2rem;
   text-align: center;
   padding-top: 3rem;
-  position:relative;
+  position: relative;
   left: 38rem;
   margin-bottom: 2.5rem;
 }
@@ -155,7 +156,7 @@ body {
   border-bottom: 4px solid #ffffff;
 }
 .rule-details {
-  margin: 1rem 6rem 1rem 9rem;
+  margin: 1.5rem 6rem 1rem 9rem;
 }
 .rule-details h4 {
   color: #52ab98;
@@ -397,7 +398,7 @@ body {
   font-size: 6rem;
   letter-spacing: 0.2rem;
   color: #ffffff;
-  padding-top: 5rem;
+  padding-top: 3rem;
   margin: 0;
 }
 .winner-heading img {
@@ -415,7 +416,29 @@ body {
   letter-spacing: 0.1rem;
   font-weight: 600;
   color: #c8d8e4;
-  margin-top: 12rem;
+  margin-top: 10rem;
+}
+.play-again-btn {
+  position: absolute;
+  left: 42rem;
+  bottom: 3rem;
+}
+.play-again-btn button {
+  font-size: 1.4rem;
+  padding: 0.4rem 0.6rem;
+  border: 3px solid rgb(223, 121, 108);
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  color: rgb(226, 126, 113);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 550;
+}
+.play-again-btn button:hover {
+  border: 3px solid #ffffff;
+  background-color: rgb(226, 126, 113);
+  color: #ffffff;
+  animation: anim 1.5s infinite;
 }
 /* end of winner page */
 .btn-anim {
